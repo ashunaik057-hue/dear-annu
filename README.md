@@ -1,6 +1,6 @@
 # dear-annu
 For Annu, with love and a sincere apology ❤️
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,101 +8,52 @@ For Annu, with love and a sincere apology ❤️
 <title>For Annu ❤️</title>
 
 <style>
-body{
+*{
     margin:0;
-    padding:20px;
-    font-family:Georgia, serif;
-    background:linear-gradient(135deg,#ffd1dc,#fff5f7);
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#ffd1dc,#fff5f7);
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 .card{
-    background:white;
-    max-width:800px;
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.95);
     padding:40px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    border-radius:25px;
     text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    animation:fadeIn 1.5s ease;
+    z-index:2;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 h1{
-    color:#ff4f7b;
-}
-
-p{
-    font-size:18px;
-    line-height:1.8;
-    color:#444;
-}
-
-button{
-    margin-top:20px;
-    padding:14px 30px;
-    border:none;
-    border-radius:30px;
-    background:#ff4f7b;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-
-.hidden{
-    display:none;
-    margin-top:25px;
-    color:#ff4f7b;
-    font-size:20px;
-    font-weight:bold;
-}
-</style>
-</head>
-
-<body>
-
-<div class="card">
-    <h1>To My Annu ❤️</h1>
-
-    <p>
-        I'm sorry for every moment I hurt you,
-        every misunderstanding,
-        every disappointment,
-        and every mistake I've made.
-
-        <br><br>
-
-        You mean more to me than words can explain.
-
-        <br><br>
-
-        Thank you for your love, patience, care, and for staying beside me even when I'm imperfect.
-
-        <br><br>
-
-        I know I don't always get everything right, but one thing I never get wrong is loving you.
-
-        <br><br>
-
-        If I could erase every moment that made you sad, I would.
-
-        <br><br>
-
-        I love you, Annu. Today, tomorrow, and every day after that. ❤️
-    </p>
-
-    <button onclick="showLove()">One More Thing ❤️</button>
-
-    <div id="love" class="hidden">
-        Annu, if I had a thousand chances, I'd still choose you every single time. ❤️
-    </div>
-</div>
-
-<script>
-function showLove(){
-    document.getElementById("love").style.display = "block";
-}
-</script>
-
-</body>
-</html>
+    color:#
